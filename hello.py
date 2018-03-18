@@ -9,6 +9,9 @@ app = Flask(__name__)
 
 itemss = []
 itemss.append(Item("eka"))
+itemss.append(Item("Toka"))
+itemss.append(Item("Kolmas"))
+itemss.append(Item("Neljas"))
 
 #default route
 @app.route("/")
