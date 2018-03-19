@@ -5,7 +5,7 @@ class Item:
     def __init__(self, name):
         self.name = name
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates_old")
 
 itemss = []
 itemss.append(Item("eka"))
