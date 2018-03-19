@@ -133,7 +133,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var SocketService = /** @class */ (function () {
     function SocketService() {
         this.url = 'http://localhost:5000';
-        this.socket = __WEBPACK_IMPORTED_MODULE_1_socket_io_client__();
+        if (window.location.href == "http://localhost:4200/") {
+            this.socket = __WEBPACK_IMPORTED_MODULE_1_socket_io_client__("http://127.0.0.1:5000/");
+        }
+        else if (window.location.href == "http://localhost:5000/") {
+            this.socket = __WEBPACK_IMPORTED_MODULE_1_socket_io_client__("http://127.0.0.1:5000/");
+        }
+        else {
+            this.socket = __WEBPACK_IMPORTED_MODULE_1_socket_io_client__("https://tsoha-harkka.herokuapp.com/");
+        }
+        console.log(window.location.href);
+        this.socket.on('connect', function () {
+            console.log("connected");
+        });
+        this.socket.on('message', function (data) {
+            console.log("got message");
+            console.log(data);
+        });
     }
     SocketService.prototype.sendMessage = function (message) {
         this.socket.emit('message', message);

@@ -18,8 +18,8 @@ def piip():
 
 @socketio.on('message')
 def handle_message(message):
+    send("ok - connection succeed", broadcast=False)
     print('\nreceived message: ' + message + '\n')
-    send("ok", broadcast=False)
 
 if __name__ == "__main__":
 	socketio.run(app, debug=True)
