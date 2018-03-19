@@ -133,7 +133,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var SocketService = /** @class */ (function () {
     function SocketService() {
         this.url = 'http://localhost:5000';
-        this.socket = __WEBPACK_IMPORTED_MODULE_1_socket_io_client__(this.url);
+        this.socket = __WEBPACK_IMPORTED_MODULE_1_socket_io_client__();
     }
     SocketService.prototype.sendMessage = function (message) {
         this.socket.emit('message', message);
