@@ -7,9 +7,11 @@ export class SocketService {
   private socket;
 
   constructor() {
-    if(window.location.href=="http://localhost:4200/"){
+    if(window.location.href=="http://localhost:4200/"||
+        window.location.href=="http://localhost:4200"){
       this.socket = io("http://127.0.0.1:5000/");
-    }else if(window.location.href=="http://localhost:5000/"){
+    }else if(window.location.href=="http://localhost:5000/"||
+        window.location.href=="http://localhost:5000"){
       this.socket = io("http://127.0.0.1:5000/");
     }else{
       this.socket = io("https://tsoha-harkka.herokuapp.com/");

@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --output-path=../static",
+    "build": "ng build --output-path=../application/static",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

@@ -8,9 +8,17 @@ import { SocketService } from './socket.service';
 })
 export class AppComponent {
 
+  username:any;
+  password:any;
+
   constructor(private socketService: SocketService){
     this.socketService.sendMessage("hello server");
 	}
+
+  click(){
+    this.socketService.sendMessage("hello server");
+    alert(this.username + " " + this.password);
+  }
 
 	title = 'app';
 }
