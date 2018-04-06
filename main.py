@@ -3,7 +3,7 @@ from flask_socketio import SocketIO, emit,  send
 from flask_session import Session
 
 Session(app)
-socketio = SocketIO(app, binary=False, manage_session=False)
+socketio = SocketIO(app, binary=True, manage_session=True)
 
 #db.create_all()
 
