@@ -1,7 +1,9 @@
 from application import app
 from flask_socketio import SocketIO, emit,  send
+from flask_session import Session
 
-socketio = SocketIO(app, binary=False)
+Session(app)
+socketio = SocketIO(app, binary=False, manage_session=False)
 
 #db.create_all()
 
