@@ -12,6 +12,7 @@ export class AppComponent {
   password:any;
 
   constructor(private socketService: SocketService){
+    console.log("sending");
     this.socketService.sendMessage("hello server");
 	}
 
