@@ -1,1 +1,1 @@
-web: gunicorn --timeout 360 --worker-class socketio.sgunicorn.GeventSocketIOWorker main:app
+web: gunicorn --timeout 360 --worker-class eventlet -w 1 main:app
