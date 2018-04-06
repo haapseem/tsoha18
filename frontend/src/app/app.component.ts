@@ -17,6 +17,7 @@ export class AppComponent {
 	}
 
   click(){
+    this.socketService: SocketService;
     this.socketService.sendMessage("hello server");
     alert(this.username + " " + this.password);
   }
