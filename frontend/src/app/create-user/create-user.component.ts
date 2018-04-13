@@ -39,8 +39,10 @@ export class CreateUserComponent implements OnInit {
               this.name = "";
               this.email = "";
               this.password = "";
+
+              window.location.href = "/login";
             }else{
-              alert("User or email already exists " + aswr["data"]);
+              alert("User or email already exists");
             }
           }
         }else{
@@ -49,7 +51,7 @@ export class CreateUserComponent implements OnInit {
       }, 100);
       setTimeout(() => {
         clearInterval(timerId);
-        alert('timeouted query');
+        // alert('timeouted query');
       }, 5000);
     }
 

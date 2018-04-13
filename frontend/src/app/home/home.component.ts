@@ -9,12 +9,27 @@ import { RouterModule, Routes } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(ss: StorageService) {
+  userName: any = "";
+  show = false;
+
+  getUserName(){
+    return this.userName;
+  }
+
+  constructor(private storageService: StorageService) {
+    this.checkStatus();
     setInterval(() => {
-      if(!ss.getData("login")){
-        window.location.href = "/login";
-      }
-    }, 500);
+      this.checkStatus();
+    }, 1000);
+  }
+
+  checkStatus(){
+    if(!this.storageService.getData("login")){
+      window.location.href = "/login";
+    }else{
+      this.userName = JSON.parse(this.storageService.getData("login"))["name"];
+      this.show = true;
+    }
   }
 
   ngOnInit() {

@@ -43,6 +43,11 @@ class SioController():
             username=data["username"]).filter_by(
             password=blake2b(bytes(data["password"], "utf-8")).hexdigest()).count() > 0;
 
+    def getUser(self, username):
+        return User.query.filter_by(
+            username=username).first();
+
+
 
     def messageSolver(self, message):
         res = User.query.all()
@@ -69,12 +74,17 @@ class SioController():
         elif data["command"] == "login":
 
             if(self._getLogIn(data["data"])):
-                # self._logger("User login: " + data["data"]["username"])
+                u = self.getUser(data["data"]["username"])
+
                 return json.dumps({
                     'command': 'status',
-                    'data': 'ok'})
+                    'data': 'ok',
+                    'data2': {
+                        'user': u.username,
+                        'name': u.name,
+                        'email': u.email,
+                    }})
             else:
-                # self._logger("User trying to login: " + data["data"]["username"])
                 return json.dumps({
                     'command': 'status',
                     'data': 'not ok'})

@@ -26,19 +26,19 @@ export class LoginComponent implements OnInit {
 
         let timerId = setInterval(() => {
           if(this.socketService.isAnswered()){
-            let aswr = this.socketService.getAnswer();
-            console.log(aswr);
-            if(aswr["command"]=="status"){
+            let result = this.socketService.getAnswer();
+            console.log(result);
+            if(result["command"]=="status"){
               clearInterval(timerId);
-              if(aswr["data"]=="ok"){
+              if(result["data"]=="ok"){
                 alert("user logged in");
-                this.storageService.save("login", {
-                  user: this.username
-                });
+                this.storageService.save("login", result["data2"]);
                 this.username = "";
                 this.password = "";
+
+                window.location.href = "/";
               }else{
-                // alert("login failed");
+                alert("login failed");
               }
             }
           }else{
@@ -48,7 +48,6 @@ export class LoginComponent implements OnInit {
 
         setTimeout(() => {
           clearInterval(timerId);
-          alert("login failed");
         }, 1000);
       }
 

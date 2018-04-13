@@ -1,5 +1,6 @@
 
-<div style="text-align: center; margin: auto; width: 200px;">
-<img src="https://m.popkey.co/fe4ba7/DYALX.gif" style="width: 200px;"/>
-<p>Status check</p>
+<div class="mdl-grid" *ngIf="show">
+  <div class="mld-cell mdl-cell--2-col mdl-cell--4-col-phone mdl-color--primary">
+    Logged in as {{getUserName()}}
+  </div>
 </div>
