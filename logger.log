@@ -507,3 +507,11 @@ starting logger
 2018-04-13 20:43:17,552 - __main__ - INFO - User has connected
 2018-04-13 20:43:48,768 - __main__ - INFO - User has connected
 2018-04-13 20:51:42,271 - __main__ - INFO - User has connected
+2018-04-13 20:54:28,786 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 20:54:29,770 - __main__ - INFO - starting logger: __main__
+2018-04-13 20:54:30,220 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 20:54:30,512 - __main__ - INFO - starting logger: __main__
+2018-04-13 20:54:31,073 - __main__ - INFO - User has connected
+2018-04-13 20:54:34,360 - __main__ - INFO - User has connected
+2018-04-13 20:54:51,095 - __main__ - INFO - User has connected
+2018-04-13 21:29:57,497 - __main__ - INFO - User has connected
