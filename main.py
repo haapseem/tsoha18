@@ -21,13 +21,15 @@ sioCtrl = SioController()
 logger = Logger(logging.getLogger(__name__)).getLogger()
 logger.info("starting logger: " + __name__)
 
+
 # Socket io session
 Session(app)
 socketio = SocketIO(app, binary=True, manage_session=True)
 
 #Socket connection created with client
-@socketio.on("connection")
+@socketio.on("connect")
 def connectionEstablished():
+    logger.info("User has connected: ")
     print("user has connected")
 
 # Socket messages (json)
