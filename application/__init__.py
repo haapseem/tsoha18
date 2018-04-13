@@ -18,5 +18,8 @@ db = SQLAlchemy(app)
 from application import views
 
 from application.users import models
+from application.tags import models
+from application.tagsTopics import models
+from application.topics import models
 
 db.create_all()
