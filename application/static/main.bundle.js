@@ -27,7 +27,7 @@ module.exports = ""
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n\r\n<a routerLink=\"/viikko2\">asdf</a>\r\n\r\n\r\n\r\n<router-outlet mdl-shadow=\"2\"></router-outlet>\r\n"
+module.exports = "\r\n<!-- Always shows a header, even in smaller screens. -->\r\n<div class=\"mdl-layout mdl-js-layout mdl-layout--fixed-header\">\r\n  <header class=\"mdl-layout__header\">\r\n    <div class=\"mdl-layout__header-row\">\r\n      <!-- Title -->\r\n      <span class=\"mdl-layout-title\">A page that hasn't been seen b4</span>\r\n      <!-- Add spacer, to align navigation to the right -->\r\n      <div class=\"mdl-layout-spacer\"></div>\r\n      <!-- Navigation. We hide it in small screens. -->\r\n      <nav class=\"mdl-navigation mdl-layout--large-screen-only\">\r\n        <a class=\"mdl-navigation__link\" routerLink=\"/login\">login</a>\r\n      </nav>\r\n    </div>\r\n  </header>\r\n  <div class=\"mdl-layout__drawer\">\r\n    <span class=\"mdl-layout-title\">A page that hasn't been seen b4</span>\r\n    <nav class=\"mdl-navigation\">\r\n      <a class=\"mdl-navigation__link\" routerLink=\"/login\">login</a>\r\n    </nav>\r\n  </div>\r\n  <main class=\"mdl-layout__content\">\r\n  <router-outlet mdl-shadow=\"2\"></router-outlet>\r\n  </main>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -77,9 +77,9 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__viikko2_viikko2_component__ = __webpack_require__("./src/app/viikko2/viikko2.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_home_component__ = __webpack_require__("./src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__viikko2_create_viikko2_create_component__ = __webpack_require__("./src/app/viikko2-create/viikko2-create.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_home_component__ = __webpack_require__("./src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__login_login_component__ = __webpack_require__("./src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__create_user_create_user_component__ = __webpack_require__("./src/app/create-user/create-user.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -96,9 +96,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var appRoutes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_7__home_home_component__["a" /* HomeComponent */] },
-    { path: 'viikko2', component: __WEBPACK_IMPORTED_MODULE_6__viikko2_viikko2_component__["a" /* Viikko2Component */] },
-    { path: 'viikko2/create', component: __WEBPACK_IMPORTED_MODULE_8__viikko2_create_viikko2_create_component__["a" /* Viikko2CreateComponent */] }
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_6__home_home_component__["a" /* HomeComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_7__login_login_component__["a" /* LoginComponent */] },
+    { path: 'login/create', component: __WEBPACK_IMPORTED_MODULE_8__create_user_create_user_component__["a" /* CreateUserComponent */] }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -107,9 +107,9 @@ var AppModule = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__viikko2_viikko2_component__["a" /* Viikko2Component */],
-                __WEBPACK_IMPORTED_MODULE_7__home_home_component__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__viikko2_create_viikko2_create_component__["a" /* Viikko2CreateComponent */]
+                __WEBPACK_IMPORTED_MODULE_6__home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__login_login_component__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__create_user_create_user_component__["a" /* CreateUserComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* RouterModule */].forRoot(appRoutes),
@@ -121,6 +121,96 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/create-user/create-user.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/create-user/create-user.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div class=\"mdl-grid\">\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \">\n      <h4>Login</h4>\n    </div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \">\n\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" [(ngModel)]=\"username\" type=\"text\" id=\"username\">\n        <label class=\"mdl-textfield__label\" for=\"username\">username</label>\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" [(ngModel)]=\"name\" type=\"text\" id=\"name\">\n        <label class=\"mdl-textfield__label\" for=\"name\">name</label>\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" [(ngModel)]=\"email\" type=\"text\" id=\"email\">\n        <label class=\"mdl-textfield__label\" for=\"email\">email</label>\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" [(ngModel)]=\"password\" type=\"password\" id=\"password\">\n        <label class=\"mdl-textfield__label\" for=\"password\">email</label>\n      </div>\n      <div>\n        <button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" (click)=\"click()\">\n          Create\n        </button>\n      </div>\n      <div>\n        <a routerLink=\"/login\"> or login</a>\n      </div>\n    </div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n  </div>\n\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/create-user/create-user.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreateUserComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__socket_service__ = __webpack_require__("./src/app/socket.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var CreateUserComponent = /** @class */ (function () {
+    function CreateUserComponent(socketService) {
+        this.socketService = socketService;
+    }
+    CreateUserComponent.prototype.click = function () {
+        var _this = this;
+        this.socketService.sendMessage(JSON
+            .stringify({ command: 'createUser',
+            data: {
+                username: this.username,
+                name: this.name,
+                email: this.email,
+                password: this.password,
+            } }));
+        var timerId = setInterval(function () {
+            if (_this.socketService.isAnswered()) {
+                var aswr = _this.socketService.getAnswer();
+                console.log(aswr);
+                if (aswr["command"] == "status") {
+                    clearInterval(timerId);
+                    if (aswr["data"] == "ok") {
+                        alert("user created");
+                        _this.username = "";
+                        _this.name = "";
+                        _this.email = "";
+                        _this.password = "";
+                    }
+                    else {
+                        alert("User or email already exists " + aswr["data"]);
+                    }
+                }
+            }
+            else {
+                console.log("waiting...");
+            }
+        }, 100);
+        setTimeout(function () {
+            clearInterval(timerId);
+            alert('timeouted query');
+        }, 5000);
+    };
+    CreateUserComponent.prototype.ngOnInit = function () {
+    };
+    CreateUserComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-create-user',
+            template: __webpack_require__("./src/app/create-user/create-user.component.html"),
+            styles: [__webpack_require__("./src/app/create-user/create-user.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__socket_service__["a" /* SocketService */]])
+    ], CreateUserComponent);
+    return CreateUserComponent;
 }());
 
 
@@ -177,6 +267,92 @@ var HomeComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/login/login.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/login/login.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div class=\"mdl-grid\">\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \">\n      <h4>Login</h4>\n    </div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \">\n\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" [(ngModel)]=\"username\" type=\"text\" id=\"username\">\n        <label class=\"mdl-textfield__label\" for=\"username\">username</label>\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" [(ngModel)]=\"password\" type=\"password\" id=\"password\">\n        <label class=\"mdl-textfield__label\" for=\"password\">password</label>\n      </div>\n      <div>\n        <button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" (click)=\"click()\">\n          log in\n        </button>\n      </div>\n      <div>\n        <a routerLink=\"/login/create\"> or create user</a>\n      </div>\n    </div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n  </div>\n\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/login/login.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__socket_service__ = __webpack_require__("./src/app/socket.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var LoginComponent = /** @class */ (function () {
+    function LoginComponent(socketService) {
+        this.socketService = socketService;
+    }
+    LoginComponent.prototype.click = function () {
+        var _this = this;
+        this.socketService.sendMessage(JSON
+            .stringify({ command: 'login',
+            data: {
+                username: this.username,
+                password: this.password,
+            } }));
+        var timerId = setInterval(function () {
+            if (_this.socketService.isAnswered()) {
+                var aswr = _this.socketService.getAnswer();
+                console.log(aswr);
+                if (aswr["command"] == "status") {
+                    clearInterval(timerId);
+                    if (aswr["data"] == "ok") {
+                        alert("user logged in");
+                        _this.username = "";
+                        _this.password = "";
+                    }
+                    else {
+                        alert("login failed");
+                    }
+                }
+            }
+            else {
+                console.log("waiting...");
+            }
+        }, 100);
+        setTimeout(function () {
+            clearInterval(timerId);
+            alert("login failed");
+        }, 1000);
+    };
+    LoginComponent.prototype.ngOnInit = function () {
+    };
+    LoginComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-login',
+            template: __webpack_require__("./src/app/login/login.component.html"),
+            styles: [__webpack_require__("./src/app/login/login.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__socket_service__["a" /* SocketService */]])
+    ], LoginComponent);
+    return LoginComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/socket.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -198,7 +374,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var SocketService = /** @class */ (function () {
     function SocketService() {
+        var _this = this;
         this.url = 'http://localhost:5000';
+        this.answer = {
+            'command': 'none',
+            'data': ''
+        };
         if (window.location.port == "4200") {
             this.socket = __WEBPACK_IMPORTED_MODULE_1_socket_io_client__("http://127.0.0.1:5000/");
         }
@@ -213,141 +394,28 @@ var SocketService = /** @class */ (function () {
             console.log("connected");
         });
         this.socket.on('message', function (data) {
-            console.log("got message");
-            console.log(data);
+            _this.answer = JSON.parse(data);
         });
     }
     SocketService.prototype.sendMessage = function (message) {
-        console.log(message);
         this.socket.emit('message', message);
+    };
+    SocketService.prototype.isAnswered = function () {
+        return this.answer["command"] != "none";
+    };
+    SocketService.prototype.getAnswer = function () {
+        var retval = this.answer;
+        this.answer = {
+            'command': 'none',
+            'data': ''
+        };
+        return retval;
     };
     SocketService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [])
     ], SocketService);
     return SocketService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/viikko2-create/viikko2-create.component.css":
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/viikko2-create/viikko2-create.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "\n<div>\n  <h1> Create user </h1>\n</div>\n\n<div>\n  <p>Tunnus: <input [(ngModel)]=\"username\" type=\"text\"></p>\n  <p>Nimi: <input [(ngModel)]=\"name\" type=\"text\"></p>\n  <p>Sähköposti: <input [(ngModel)]=\"email\" type=\"text\"></p>\n  <p>Salasana: <input [(ngModel)]=\"password\" type=\"text\"></p>\n\n  <button (click)=\"click()\">click</button>\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/viikko2-create/viikko2-create.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Viikko2CreateComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__socket_service__ = __webpack_require__("./src/app/socket.service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var Viikko2CreateComponent = /** @class */ (function () {
-    function Viikko2CreateComponent(socketService) {
-        this.socketService = socketService;
-    }
-    Viikko2CreateComponent.prototype.click = function () {
-        this.socketService.sendMessage(JSON
-            .stringify({ command: 'createUser',
-            data: {
-                username: this.username,
-                name: this.name,
-                email: this.email,
-                password: this.password,
-            } }));
-    };
-    Viikko2CreateComponent.prototype.ngOnInit = function () {
-    };
-    Viikko2CreateComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'app-viikko2-create',
-            template: __webpack_require__("./src/app/viikko2-create/viikko2-create.component.html"),
-            styles: [__webpack_require__("./src/app/viikko2-create/viikko2-create.component.css")]
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__socket_service__["a" /* SocketService */]])
-    ], Viikko2CreateComponent);
-    return Viikko2CreateComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/viikko2/viikko2.component.css":
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/viikko2/viikko2.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<!--\n  <input [(ngModel)]=\"username\" type=\"text\">\n  <input [(ngModel)]=\"password\" type=\"password\">\n\n  <button (click)=\"click()\">click</button>\n-->\n\n<a routerLink=\"create\">create</a>\n"
-
-/***/ }),
-
-/***/ "./src/app/viikko2/viikko2.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Viikko2Component; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__socket_service__ = __webpack_require__("./src/app/socket.service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var Viikko2Component = /** @class */ (function () {
-    function Viikko2Component(socketService) {
-        this.socketService = socketService;
-        // console.log("sending");
-        // this.socketService.sendMessage("hello server");
-    }
-    Viikko2Component.prototype.click = function () {
-        // this.socketService.sendMessage("hello server");
-        // alert(this.username + " " + this.password);
-    };
-    Viikko2Component.prototype.ngOnInit = function () {
-    };
-    Viikko2Component = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'app-viikko2',
-            template: __webpack_require__("./src/app/viikko2/viikko2.component.html"),
-            styles: [__webpack_require__("./src/app/viikko2/viikko2.component.css")]
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__socket_service__["a" /* SocketService */]])
-    ], Viikko2Component);
-    return Viikko2Component;
 }());
 
 

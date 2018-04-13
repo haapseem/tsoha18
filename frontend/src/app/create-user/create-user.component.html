@@ -2,7 +2,7 @@
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--4-col "></div>
     <div class="mdl-cell mdl-cell--4-col ">
-      <h4>Create User</h4>
+      <h4>Login</h4>
     </div>
     <div class="mdl-cell mdl-cell--4-col "></div>
     <div class="mdl-cell mdl-cell--4-col "></div>
@@ -22,12 +22,15 @@
       </div>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <input class="mdl-textfield__input" [(ngModel)]="password" type="password" id="password">
-        <label class="mdl-textfield__label" for="password">password</label>
+        <label class="mdl-textfield__label" for="password">email</label>
       </div>
       <div>
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" (click)="click()">
           Create
         </button>
+      </div>
+      <div>
+        <a routerLink="/login"> or login</a>
       </div>
     </div>
     <div class="mdl-cell mdl-cell--4-col "></div>

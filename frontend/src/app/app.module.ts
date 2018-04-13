@@ -1,36 +1,40 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { SocketService } from './socket.service';
+import { StorageService } from './storage.service';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import {ActivatedRoute} from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-import { Viikko2Component } from './viikko2/viikko2.component';
 import { HomeComponent } from './home/home.component';
-import { Viikko2CreateComponent } from './viikko2-create/viikko2-create.component';
+import { LoginComponent } from './login/login.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'viikko2', component: Viikko2Component },
-  { path: 'viikko2/create', component: Viikko2CreateComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'login/create', component: CreateUserComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    Viikko2Component,
     HomeComponent,
-    Viikko2CreateComponent
+    LoginComponent,
+    CreateUserComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule
   ],
-  providers: [SocketService],
+  providers: [
+    SocketService,
+    StorageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,8 +3,12 @@ import * as io from 'socket.io-client';
 
 @Injectable()
 export class SocketService {
+
   private url = 'http://localhost:5000';
   private socket;
+  private answer : any = {
+    'command' : 'none',
+    'data' : ''};
 
   constructor() {
     if(window.location.port=="4200"){
@@ -21,14 +25,24 @@ export class SocketService {
     });
 
     this.socket.on('message', (data) => {
-      console.log("got message");
-      console.log(data);
+      this.answer = JSON.parse(data);
     });
   }
 
   public sendMessage(message) {
-    console.log(message);
     this.socket.emit('message', message);
+  }
+
+  public isAnswered(){
+    return this.answer["command"]!="none";
+  }
+
+  public getAnswer(){
+    let retval = this.answer;
+    this.answer = {
+      'command' : 'none',
+      'data' : ''};
+    return retval;
   }
 
 }

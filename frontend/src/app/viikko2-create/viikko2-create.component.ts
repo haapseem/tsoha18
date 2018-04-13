@@ -25,6 +25,17 @@ export class Viikko2CreateComponent implements OnInit {
           email: this.email,
           password: this.password,
         }}));
+
+    let timerId = setInterval(() => {
+      if(this.socketService.isAnswered()){
+        clearInterval(timerId);
+        alert(this.socketService.getAnswer()["command"]);
+        this.username = "";
+      }else{
+        console.log("waiting...");
+      }
+    }, 100);
+    // setTimeout(() => { clearInterval(timerId); alert('stop'); }, 5000);
   }
 
   ngOnInit() {

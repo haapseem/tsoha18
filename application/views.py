@@ -4,11 +4,11 @@ from application import app
 
 #main route, home
 @app.route("/")
-@app.route("/viikko2")
+@app.route("/login")
 def home():
 	return render_template("index.html")
 #	return app.send_static_file('index.html')
 
-@app.route("/viikko2/<name>")
+@app.route("/login/<name>")
 def home2(name):
 	return render_template("index.html")

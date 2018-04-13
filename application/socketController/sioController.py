@@ -26,7 +26,6 @@ class SioController():
 
         # Check if user already exists
         if not User.query.filter_by(email=data["email"]).count() + \
-                User.query.filter_by(name=data["name"]).count() + \
                 User.query.filter_by(username=data["username"]).count():
             # if user doesn't exists then create
             u = User(data["username"], data["name"], data["email"], p)
@@ -39,6 +38,12 @@ class SioController():
             self._logger.warning("User already exists")
             return False
 
+    def _getLogIn(self, data):
+        return User.query.filter_by(
+            username=data["username"]).filter_by(
+            password=blake2b(bytes(data["password"], "utf-8")).hexdigest()).count() > 0;
+
+
     def messageSolver(self, message):
         res = User.query.all()
         for r in res:
@@ -48,11 +53,32 @@ class SioController():
         print('\nreceived message: ' + message + '\n')
         data = json.loads(message)
         print(data["command"])
+
+        # User trying to create one
         if data["command"] == "createUser":
             if(self._createUser(data["data"])):
-                return 'user created'
+                return json.dumps({
+                    'command': 'status',
+                    'data': 'ok'})
             else:
-                return "user not created"
+                return json.dumps({
+                    'command': 'status',
+                    'data': 'not ok'})
+
+        # if user trying to log in
+        elif data["command"] == "login":
+
+            if(self._getLogIn(data["data"])):
+                # self._logger("User login: " + data["data"]["username"])
+                return json.dumps({
+                    'command': 'status',
+                    'data': 'ok'})
+            else:
+                # self._logger("User trying to login: " + data["data"]["username"])
+                return json.dumps({
+                    'command': 'status',
+                    'data': 'not ok'})
+
 
 
         # return 'message was: ' + message
