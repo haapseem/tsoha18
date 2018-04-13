@@ -16,4 +16,8 @@ export class StorageService extends Init {
     return this.load(x);
   }
 
+  clear(){
+    super.clear();
+  }
+
 }

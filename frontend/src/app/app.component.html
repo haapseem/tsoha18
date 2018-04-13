@@ -9,14 +9,24 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" routerLink="/login">login</a>
+        <div *ngIf="!loggedIn">
+          <a class="mdl-navigation__link" routerLink="/login">login</a>
+        </div>
+        <div *ngIf="loggedIn">
+          <a class="mdl-navigation__link" (click)="logout()">logout</a>
+        </div>
       </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Tsoha</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" routerLink="/login">login</a>
+      <div *ngIf="!loggedIn">
+        <a class="mdl-navigation__link" routerLink="/login">login</a>
+      </div>
+      <div *ngIf="loggedIn">
+        <a class="mdl-navigation__link" (click)="logout()">logout</a>
+      </div>
     </nav>
   </div>
   <main class="mdl-layout__content">

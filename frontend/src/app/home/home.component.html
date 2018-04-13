@@ -1,6 +1,40 @@
 
 <div class="mdl-grid" *ngIf="show">
-  <div class="mld-cell mdl-cell--2-col mdl-cell--4-col-phone mdl-color--primary">
-    Logged in as {{getUserName()}}
+  <!-- user panel -->
+  <div class="mld-cell mdl-cell--3-col mdl-cell--4-col-phone">
+    <div class="mdl-card mdl-shadow--6dp mdl-color--primary mdl-color-text--grey-100"
+        style="width: 100%;">
+      <div class="mdl-card__title">
+        <h4  class="mdl-card__title-text mdl-color-text--grey-100">Logged in as {{getUserName()}}</h4>
+      </div>
+      <div class="mdl-card__supporting-text mdl-color-text--grey-100">
+        <p>There will be settings</p>
+      </div>
+    </div>
   </div>
+
+  <!-- feed and creation -->
+  <div class="mdl-cell mdl-cell--9-col mdl-cell--5-col-tablet">
+    <div class="container-fluid mdl-shadow--6dp" style="padding: 10px 10px;">
+
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" placeholder="topic" [(ngModel)]="topic" type="text" id="topic">
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" placeholder="tag, tag,.." [(ngModel)]="tags" type="text" id="tags">
+      </div>
+
+      <textarea [(ngModel)]="topicText" style="width: 100%;" placeholder="KESKEN"></textarea>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" (click)="click()">
+        Create topic
+      </button>
+    </div>
+
+    <!-- Feed -->
+    <div class="container-fluid mdl-shadow--6dp" style="margin: 20px 0 0 0;">
+It's the end of the conversations
+    </div>
+
+  </div>
+
 </div>

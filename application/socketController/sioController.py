@@ -82,7 +82,7 @@ class SioController():
                     'data2': {
                         'user': u.username,
                         'name': u.name,
-                        'email': u.email,
+                        'email': u.email
                     }})
             else:
                 return json.dumps({

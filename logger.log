@@ -476,3 +476,34 @@ starting logger
 2018-04-13 18:12:01,768 - __main__ - INFO - starting logger: __main__
 2018-04-13 18:12:03,077 - __main__ - INFO - User has connected: 
 2018-04-13 18:12:05,076 - __main__ - INFO - User has connected: 
+2018-04-13 18:13:48,124 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 18:13:48,428 - __main__ - INFO - starting logger: __main__
+2018-04-13 18:13:48,875 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 18:13:49,166 - __main__ - INFO - starting logger: __main__
+2018-04-13 18:13:49,326 - __main__ - INFO - User has connected: 
+2018-04-13 18:13:49,333 - __main__ - INFO - User has connected: 
+2018-04-13 18:14:09,716 - __main__ - INFO - User has connected: 
+2018-04-13 18:53:49,777 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 18:53:50,112 - __main__ - INFO - starting logger: __main__
+2018-04-13 18:53:51,084 - __main__ - INFO - User has connected: 
+2018-04-13 18:53:51,089 - __main__ - INFO - User has connected: 
+2018-04-13 18:55:01,252 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 18:55:01,565 - __main__ - INFO - starting logger: __main__
+2018-04-13 18:55:02,075 - __main__ - INFO - User has connected
+2018-04-13 18:55:02,078 - __main__ - INFO - User has connected
+2018-04-13 18:56:01,478 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 18:56:01,778 - __main__ - INFO - starting logger: __main__
+2018-04-13 18:56:03,075 - __main__ - INFO - User has connected
+2018-04-13 18:56:03,079 - __main__ - INFO - User has connected
+2018-04-13 19:08:08,977 - __main__ - INFO - User has connected
+2018-04-13 19:08:28,356 - application.socketController.sioController - INFO - creating user: t
+2018-04-13 19:08:28,390 - application.socketController.sioController - INFO - User has been created
+2018-04-13 19:08:30,098 - __main__ - INFO - User has connected
+2018-04-13 19:53:54,172 - __main__ - INFO - User has connected
+2018-04-13 19:54:06,033 - application.socketController.sioController - INFO - creating user: a
+2018-04-13 19:54:06,067 - application.socketController.sioController - INFO - User has been created
+2018-04-13 19:54:08,197 - __main__ - INFO - User has connected
+2018-04-13 20:40:50,963 - __main__ - INFO - User has connected
+2018-04-13 20:43:17,552 - __main__ - INFO - User has connected
+2018-04-13 20:43:48,768 - __main__ - INFO - User has connected
+2018-04-13 20:51:42,271 - __main__ - INFO - User has connected

@@ -14,23 +14,21 @@ from flask import jsonify
 import logging
 
 
-# socket io controller
-sioCtrl = SioController()
-
 # Logger
 logger = Logger(logging.getLogger(__name__)).getLogger()
 logger.info("starting logger: " + __name__)
-
 
 # Socket io session
 Session(app)
 socketio = SocketIO(app, binary=True, manage_session=True)
 
+# socket io controller
+sioCtrl = SioController()
+
 #Socket connection created with client
 @socketio.on("connect")
 def connectionEstablished():
-    logger.info("User has connected: ")
-    print("user has connected")
+    logger.info("User has connected")
 
 # Socket messages (json)
 @socketio.on('message')

@@ -27,7 +27,7 @@ module.exports = ""
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<!-- Always shows a header, even in smaller screens. -->\r\n<div class=\"mdl-layout mdl-js-layout mdl-layout--fixed-header\">\r\n  <header class=\"mdl-layout__header\">\r\n    <div class=\"mdl-layout__header-row\">\r\n      <!-- Title -->\r\n      <span class=\"mdl-layout-title\">Tsoha</span>\r\n      <!-- Add spacer, to align navigation to the right -->\r\n      <div class=\"mdl-layout-spacer\"></div>\r\n      <!-- Navigation. We hide it in small screens. -->\r\n      <nav class=\"mdl-navigation mdl-layout--large-screen-only\">\r\n        <a class=\"mdl-navigation__link\" routerLink=\"/login\">login</a>\r\n      </nav>\r\n    </div>\r\n  </header>\r\n  <div class=\"mdl-layout__drawer\">\r\n    <span class=\"mdl-layout-title\">Tsoha</span>\r\n    <nav class=\"mdl-navigation\">\r\n      <a class=\"mdl-navigation__link\" routerLink=\"/login\">login</a>\r\n    </nav>\r\n  </div>\r\n  <main class=\"mdl-layout__content\">\r\n  <router-outlet mdl-shadow=\"2\"></router-outlet>\r\n  </main>\r\n</div>\r\n"
+module.exports = "\r\n<!-- Always shows a header, even in smaller screens. -->\r\n<div class=\"mdl-layout mdl-js-layout mdl-layout--fixed-header\">\r\n  <header class=\"mdl-layout__header\">\r\n    <div class=\"mdl-layout__header-row\">\r\n      <!-- Title -->\r\n      <span class=\"mdl-layout-title\">Tsoha</span>\r\n      <!-- Add spacer, to align navigation to the right -->\r\n      <div class=\"mdl-layout-spacer\"></div>\r\n      <!-- Navigation. We hide it in small screens. -->\r\n      <nav class=\"mdl-navigation mdl-layout--large-screen-only\">\r\n        <div *ngIf=\"!loggedIn\">\r\n          <a class=\"mdl-navigation__link\" routerLink=\"/login\">login</a>\r\n        </div>\r\n        <div *ngIf=\"loggedIn\">\r\n          <a class=\"mdl-navigation__link\" (click)=\"logout()\">logout</a>\r\n        </div>\r\n      </nav>\r\n    </div>\r\n  </header>\r\n  <div class=\"mdl-layout__drawer\">\r\n    <span class=\"mdl-layout-title\">Tsoha</span>\r\n    <nav class=\"mdl-navigation\">\r\n      <div *ngIf=\"!loggedIn\">\r\n        <a class=\"mdl-navigation__link\" routerLink=\"/login\">login</a>\r\n      </div>\r\n      <div *ngIf=\"loggedIn\">\r\n        <a class=\"mdl-navigation__link\" (click)=\"logout()\">logout</a>\r\n      </div>\r\n    </nav>\r\n  </div>\r\n  <main class=\"mdl-layout__content\">\r\n  <router-outlet mdl-shadow=\"2\"></router-outlet>\r\n  </main>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -37,6 +37,7 @@ module.exports = "\r\n<!-- Always shows a header, even in smaller screens. -->\r
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__storage_service__ = __webpack_require__("./src/app/storage.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -47,17 +48,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
+    function AppComponent(storageService) {
+        var _this = this;
+        this.storageService = storageService;
         this.title = 'app';
+        setInterval(function () {
+            if (!_this.storageService.getData("login"))
+                _this.loggedIn = false;
+            else
+                _this.loggedIn = true;
+        }, 100);
     }
+    AppComponent.prototype.logout = function () {
+        this.storageService.clear();
+    };
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-root',
             template: __webpack_require__("./src/app/app.component.html"),
             styles: [__webpack_require__("./src/app/app.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__storage_service__["a" /* StorageService */]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -142,7 +155,7 @@ module.exports = ""
 /***/ "./src/app/create-user/create-user.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"mdl-grid\">\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \">\n      <h4>Login</h4>\n    </div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \">\n\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" placeholder=\"username\" [(ngModel)]=\"username\" type=\"text\" id=\"username\">\n        <!-- <label class=\"mdl-textfield__label\" for=\"username\">username</label> -->\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" placeholder=\"name\" [(ngModel)]=\"name\" type=\"text\" id=\"name\">\n        <!-- <label class=\"mdl-textfield__label\" for=\"name\">name</label> -->\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" placeholder=\"email\" [(ngModel)]=\"email\" type=\"text\" id=\"email\">\n        <!-- <label class=\"mdl-textfield__label\" for=\"email\">email</label> -->\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" placeholder=\"password\" [(ngModel)]=\"password\" type=\"password\" id=\"password\">\n        <!-- <label class=\"mdl-textfield__label\" for=\"password\">email</label> -->\n      </div>\n      <div>\n        <button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" (click)=\"click()\">\n          Create\n        </button>\n      </div>\n      <div>\n        <a routerLink=\"/login\"> or login</a>\n      </div>\n    </div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n  </div>\n\n</div>\n"
+module.exports = "<div class=\"container\">\n  <div class=\"mdl-grid\">\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \">\n      <h4>Login</h4>\n    </div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \">\n\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" placeholder=\"username\" [(ngModel)]=\"username\" type=\"text\" id=\"username\">\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" placeholder=\"name\" [(ngModel)]=\"name\" type=\"text\" id=\"name\">\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" placeholder=\"email\" [(ngModel)]=\"email\" type=\"text\" id=\"email\">\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" placeholder=\"password\" [(ngModel)]=\"password\" type=\"password\" id=\"password\">\n      </div>\n      <div>\n        <button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" (click)=\"click()\">\n          Create\n        </button>\n      </div>\n      <div>\n        <a routerLink=\"/login\"> or login</a>\n      </div>\n    </div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -233,7 +246,7 @@ module.exports = ""
 /***/ "./src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"mdl-grid\" *ngIf=\"show\">\n  <div class=\"mld-cell mdl-cell--2-col mdl-cell--4-col-phone mdl-color--primary\">\n    Logged in as {{getUserName()}}\n  </div>\n</div>\n"
+module.exports = "\n<div class=\"mdl-grid\" *ngIf=\"show\">\n  <!-- user panel -->\n  <div class=\"mld-cell mdl-cell--3-col mdl-cell--4-col-phone\">\n    <div class=\"mdl-card mdl-shadow--6dp mdl-color--primary mdl-color-text--grey-100\"\n        style=\"width: 100%;\">\n      <div class=\"mdl-card__title\">\n        <h4  class=\"mdl-card__title-text mdl-color-text--grey-100\">Logged in as {{getUserName()}}</h4>\n      </div>\n      <div class=\"mdl-card__supporting-text mdl-color-text--grey-100\">\n        <p>There will be settings</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- feed and creation -->\n  <div class=\"mdl-cell mdl-cell--9-col mdl-cell--5-col-tablet\">\n    <div class=\"container-fluid mdl-shadow--6dp\" style=\"padding: 10px 10px;\">\n\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" placeholder=\"topic\" [(ngModel)]=\"topic\" type=\"text\" id=\"topic\">\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" placeholder=\"tag, tag,..\" [(ngModel)]=\"tags\" type=\"text\" id=\"tags\">\n      </div>\n\n      <textarea [(ngModel)]=\"topicText\" style=\"width: 100%;\" placeholder=\"KESKEN\"></textarea>\n      <button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" (click)=\"click()\">\n        Create topic\n      </button>\n    </div>\n\n    <!-- Feed -->\n    <div class=\"container-fluid mdl-shadow--6dp\" style=\"margin: 20px 0 0 0;\">\nIt's the end of the conversations\n    </div>\n\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -303,13 +316,9 @@ var HomeComponent = /** @class */ (function () {
 var Init = /** @class */ (function () {
     function Init() {
     }
-    Init.prototype.write = function (x, y) {
-        localStorage.setItem(x, y);
-    };
-    Init.prototype.load = function (x) {
-        console.log(localStorage.getItem(x));
-        return localStorage.getItem(x);
-    };
+    Init.prototype.write = function (x, y) { localStorage.setItem(x, y); };
+    Init.prototype.load = function (x) { return localStorage.getItem(x); };
+    Init.prototype.clear = function () { localStorage.clear(); };
     return Init;
 }());
 
@@ -515,6 +524,9 @@ var StorageService = /** @class */ (function (_super) {
     };
     StorageService.prototype.getData = function (x) {
         return this.load(x);
+    };
+    StorageService.prototype.clear = function () {
+        _super.prototype.clear.call(this);
     };
     StorageService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
