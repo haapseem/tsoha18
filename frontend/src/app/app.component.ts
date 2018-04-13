@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SocketService } from './socket.service';
 
 @Component({
   selector: 'app-root',
@@ -8,19 +7,8 @@ import { SocketService } from './socket.service';
 })
 export class AppComponent {
 
-  username:any;
-  password:any;
+  constructor(){}
 
-  constructor(private socketService: SocketService){
-    console.log("sending");
-    this.socketService.sendMessage("hello server");
-	}
-
-  click(){
-    this.socketService: SocketService;
-    this.socketService.sendMessage("hello server");
-    alert(this.username + " " + this.password);
-  }
 
 	title = 'app';
 }

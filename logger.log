@@ -1,0 +1,74 @@
+starting logger
+starting logger
+2018-04-13 12:23:58,887 - __main__ - INFO - starting logger
+2018-04-13 12:24:35,203 - application.socketController.sioController - INFO - starting logger
+2018-04-13 12:24:35,543 - __main__ - INFO - starting logger
+2018-04-13 12:25:04,101 - application.socketController.sioController - INFO - starting logger
+2018-04-13 12:25:04,430 - __main__ - INFO - starting logger
+2018-04-13 12:30:20,495 - application.socketController.sioController - INFO - starting logger
+2018-04-13 12:30:39,687 - application.socketController.sioController - INFO - starting logger
+2018-04-13 12:30:40,020 - application.logger.logger - INFO - starting logger
+2018-04-13 12:30:40,483 - application.socketController.sioController - INFO - starting logger
+2018-04-13 12:30:40,793 - application.logger.logger - INFO - starting logger
+2018-04-13 12:31:21,813 - application.socketController.sioController - INFO - starting logger
+2018-04-13 12:31:22,124 - application.logger.logger - INFO - starting logger
+2018-04-13 12:31:26,054 - application.socketController.sioController - INFO - starting logger
+2018-04-13 12:31:26,373 - application.logger.logger - INFO - starting logger
+2018-04-13 12:32:17,702 - application.socketController.sioController - INFO - starting logger
+2018-04-13 12:32:18,058 - application.logger.logger - INFO - starting logger
+2018-04-13 12:32:32,113 - application.socketController.sioController - INFO - starting logger
+2018-04-13 12:32:32,431 - application.logger.logger - INFO - starting logger
+2018-04-13 12:32:38,271 - application.socketController.sioController - INFO - starting logger
+2018-04-13 12:32:38,577 - application.logger.logger - INFO - starting logger
+2018-04-13 12:32:39,036 - application.socketController.sioController - INFO - starting logger
+2018-04-13 12:32:39,328 - application.logger.logger - INFO - starting logger
+2018-04-13 12:33:19,129 - application.socketController.sioController - INFO - starting logger
+2018-04-13 12:33:19,449 - application.logger.logger - INFO - starting logger
+2018-04-13 12:33:55,940 - application.socketController.sioController - INFO - starting logger
+2018-04-13 12:33:56,307 - __main__ - INFO - starting logger
+2018-04-13 12:34:04,667 - application.socketController.sioController - INFO - starting logger
+2018-04-13 12:34:05,008 - __main__ - INFO - starting logger
+2018-04-13 12:34:16,705 - application.socketController.sioController - INFO - starting logger
+2018-04-13 12:34:17,014 - __main__ - INFO - starting logger
+2018-04-13 12:35:32,567 - application.socketController.sioController - INFO - starting logger
+2018-04-13 12:35:32,957 - __main__ - INFO - starting logger
+2018-04-13 12:36:28,404 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 12:36:28,752 - __main__ - INFO - starting logger
+2018-04-13 12:36:32,632 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 12:36:32,944 - __main__ - INFO - starting logger: __main__
+2018-04-13 12:37:14,867 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 12:37:15,198 - __main__ - INFO - starting logger: __main__
+2018-04-13 12:37:40,420 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 12:37:40,755 - __main__ - INFO - starting logger: __main__
+2018-04-13 12:40:51,424 - application.socketController.sioController - $BOLDINFO - starting logger: application.socketController.sioController
+2018-04-13 12:40:51,773 - __main__ - $BOLDINFO - starting logger: __main__
+2018-04-13 12:41:00,266 - application.socketController.sioController - ()$BOLDINFO) - starting logger: application.socketController.sioController
+2018-04-13 12:41:00,588 - __main__ - ()$BOLDINFO) - starting logger: __main__
+2018-04-13 12:41:02,288 - application.socketController.sioController - ($BOLDINFO) - starting logger: application.socketController.sioController
+2018-04-13 12:41:02,595 - __main__ - ($BOLDINFO) - starting logger: __main__
+2018-04-13 12:42:19,191 - application.socketController.sioController - ([1mINFO) - starting logger: application.socketController.sioController
+2018-04-13 12:42:19,514 - __main__ - ([1mINFO) - starting logger: __main__
+2018-04-13 12:43:40,575 - application.socketController.sioController - [[1mINFO] - starting logger: application.socketController.sioController
+2018-04-13 12:43:40,903 - __main__ - [[1mINFO] - starting logger: __main__
+2018-04-13 12:43:54,801 - application.socketController.sioController - [1mINFO - starting logger: application.socketController.sioController
+2018-04-13 12:43:55,118 - __main__ - [1mINFO - starting logger: __main__
+2018-04-13 12:44:04,578 - application.socketController.sioController - [1mINFO] - starting logger: application.socketController.sioController
+2018-04-13 12:44:04,885 - __main__ - [1mINFO] - starting logger: __main__
+2018-04-13 12:49:34,985 - application.socketController.sioController - 12s:INFO-8s: - starting logger: application.socketController.sioController
+2018-04-13 12:49:35,329 - __main__ - 12s:INFO-8s: - starting logger: __main__
+2018-04-13 12:49:57,137 - application.socketController.sioController - 12s:    INFO: - starting logger: application.socketController.sioController
+2018-04-13 12:49:57,453 - __main__ - 12s:    INFO: - starting logger: __main__
+2018-04-13 12:50:42,590 - application.socketController.sioController - 12s:    INFO: - starting logger: application.socketController.sioController
+2018-04-13 12:50:42,905 - __main__ - 12s:    INFO: - starting logger: __main__
+2018-04-13 12:51:07,001 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 12:51:07,333 - __main__ - INFO - starting logger: __main__
+2018-04-13 12:53:16,322 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 12:53:16,690 - __main__ - INFO - starting logger: __main__
+2018-04-13 12:54:05,231 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 12:54:05,540 - __main__ - INFO - starting logger: __main__
+2018-04-13 13:02:03,375 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 13:02:03,701 - __main__ - INFO - starting logger: __main__
+2018-04-13 13:02:48,737 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 13:02:49,055 - __main__ - INFO - starting logger: __main__
+2018-04-13 13:03:11,880 - application.socketController.sioController - INFO - starting logger: application.socketController.sioController
+2018-04-13 13:03:12,191 - __main__ - INFO - starting logger: __main__

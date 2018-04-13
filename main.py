@@ -1,21 +1,42 @@
-from application import app
+
+# Import own classes
+from application import app, db, views
+from application.socketController.sioController import SioController
+from application.users.models import User
+from application.logger.logger import Logger
+
+# import flask and SocketIO
 from flask_socketio import SocketIO, emit,  send
 from flask_session import Session
+from flask import jsonify
 
+# import other depencies
+import logging
+
+
+# socket io controller
+sioCtrl = SioController()
+
+# Logger
+logger = Logger(logging.getLogger(__name__)).getLogger()
+logger.info("starting logger: " + __name__)
+
+# Socket io session
 Session(app)
 socketio = SocketIO(app, binary=True, manage_session=True)
 
-#db.create_all()
-
+#Socket connection created with client
 @socketio.on("connection")
-def piip():
-	print("user has connected")
+def connectionEstablished():
+    print("user has connected")
 
+# Socket messages (json)
 @socketio.on('message')
 def handle_message(message):
-    print('\nreceived message: ' + message + '\n')
-    send('ok - connection succeed', broadcast=False)
+    returnValue = sioCtrl.messageSolver(message)
+    if(returnValue!=""):
+        send(returnValue, broadcast=False)
 
+# Starting application
 if __name__ == '__main__':
-#    app.run(debug=True)
     socketio.run(app, debug=True)
