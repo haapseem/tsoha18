@@ -27,7 +27,7 @@ module.exports = ""
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<!-- Always shows a header, even in smaller screens. -->\r\n<div class=\"mdl-layout mdl-js-layout mdl-layout--fixed-header\">\r\n  <header class=\"mdl-layout__header\">\r\n    <div class=\"mdl-layout__header-row\">\r\n      <!-- Title -->\r\n      <span class=\"mdl-layout-title\">A page that hasn't been seen b4</span>\r\n      <!-- Add spacer, to align navigation to the right -->\r\n      <div class=\"mdl-layout-spacer\"></div>\r\n      <!-- Navigation. We hide it in small screens. -->\r\n      <nav class=\"mdl-navigation mdl-layout--large-screen-only\">\r\n        <a class=\"mdl-navigation__link\" routerLink=\"/login\">login</a>\r\n      </nav>\r\n    </div>\r\n  </header>\r\n  <div class=\"mdl-layout__drawer\">\r\n    <span class=\"mdl-layout-title\">A page that hasn't been seen b4</span>\r\n    <nav class=\"mdl-navigation\">\r\n      <a class=\"mdl-navigation__link\" routerLink=\"/login\">login</a>\r\n    </nav>\r\n  </div>\r\n  <main class=\"mdl-layout__content\">\r\n  <router-outlet mdl-shadow=\"2\"></router-outlet>\r\n  </main>\r\n</div>\r\n"
+module.exports = "\r\n<!-- Always shows a header, even in smaller screens. -->\r\n<div class=\"mdl-layout mdl-js-layout mdl-layout--fixed-header\">\r\n  <header class=\"mdl-layout__header\">\r\n    <div class=\"mdl-layout__header-row\">\r\n      <!-- Title -->\r\n      <span class=\"mdl-layout-title\">Tsoha</span>\r\n      <!-- Add spacer, to align navigation to the right -->\r\n      <div class=\"mdl-layout-spacer\"></div>\r\n      <!-- Navigation. We hide it in small screens. -->\r\n      <nav class=\"mdl-navigation mdl-layout--large-screen-only\">\r\n        <a class=\"mdl-navigation__link\" routerLink=\"/login\">login</a>\r\n      </nav>\r\n    </div>\r\n  </header>\r\n  <div class=\"mdl-layout__drawer\">\r\n    <span class=\"mdl-layout-title\">Tsoha</span>\r\n    <nav class=\"mdl-navigation\">\r\n      <a class=\"mdl-navigation__link\" routerLink=\"/login\">login</a>\r\n    </nav>\r\n  </div>\r\n  <main class=\"mdl-layout__content\">\r\n  <router-outlet mdl-shadow=\"2\"></router-outlet>\r\n  </main>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -142,7 +142,7 @@ module.exports = ""
 /***/ "./src/app/create-user/create-user.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"mdl-grid\">\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \">\n      <h4>Login</h4>\n    </div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \">\n\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" [(ngModel)]=\"username\" type=\"text\" id=\"username\">\n        <label class=\"mdl-textfield__label\" for=\"username\">username</label>\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" [(ngModel)]=\"name\" type=\"text\" id=\"name\">\n        <label class=\"mdl-textfield__label\" for=\"name\">name</label>\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" [(ngModel)]=\"email\" type=\"text\" id=\"email\">\n        <label class=\"mdl-textfield__label\" for=\"email\">email</label>\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" [(ngModel)]=\"password\" type=\"password\" id=\"password\">\n        <label class=\"mdl-textfield__label\" for=\"password\">email</label>\n      </div>\n      <div>\n        <button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" (click)=\"click()\">\n          Create\n        </button>\n      </div>\n      <div>\n        <a routerLink=\"/login\"> or login</a>\n      </div>\n    </div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n  </div>\n\n</div>\n"
+module.exports = "<div class=\"container\">\n  <div class=\"mdl-grid\">\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \">\n      <h4>Login</h4>\n    </div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \">\n\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" placeholder=\"username\" [(ngModel)]=\"username\" type=\"text\" id=\"username\">\n        <!-- <label class=\"mdl-textfield__label\" for=\"username\">username</label> -->\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" placeholder=\"name\" [(ngModel)]=\"name\" type=\"text\" id=\"name\">\n        <!-- <label class=\"mdl-textfield__label\" for=\"name\">name</label> -->\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" placeholder=\"email\" [(ngModel)]=\"email\" type=\"text\" id=\"email\">\n        <!-- <label class=\"mdl-textfield__label\" for=\"email\">email</label> -->\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" placeholder=\"password\" [(ngModel)]=\"password\" type=\"password\" id=\"password\">\n        <!-- <label class=\"mdl-textfield__label\" for=\"password\">email</label> -->\n      </div>\n      <div>\n        <button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" (click)=\"click()\">\n          Create\n        </button>\n      </div>\n      <div>\n        <a routerLink=\"/login\"> or login</a>\n      </div>\n    </div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -190,9 +190,10 @@ var CreateUserComponent = /** @class */ (function () {
                         _this.name = "";
                         _this.email = "";
                         _this.password = "";
+                        window.location.href = "/login";
                     }
                     else {
-                        alert("User or email already exists " + aswr["data"]);
+                        alert("User or email already exists");
                     }
                 }
             }
@@ -202,7 +203,7 @@ var CreateUserComponent = /** @class */ (function () {
         }, 100);
         setTimeout(function () {
             clearInterval(timerId);
-            alert('timeouted query');
+            // alert('timeouted query');
         }, 5000);
     };
     CreateUserComponent.prototype.ngOnInit = function () {
@@ -232,7 +233,7 @@ module.exports = ""
 /***/ "./src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div style=\"text-align: center; margin: auto; width: 200px;\">\n<img src=\"https://m.popkey.co/fe4ba7/DYALX.gif\" style=\"width: 200px;\"/>\n<p>Status check</p>\n</div>\n"
+module.exports = "\n<div class=\"mdl-grid\" *ngIf=\"show\">\n  <div class=\"mld-cell mdl-cell--2-col mdl-cell--4-col-phone mdl-color--primary\">\n    Logged in as {{getUserName()}}\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -255,13 +256,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent(ss) {
+    function HomeComponent(storageService) {
+        var _this = this;
+        this.storageService = storageService;
+        this.userName = "";
+        this.show = false;
+        this.checkStatus();
         setInterval(function () {
-            if (!ss.getData("login")) {
-                window.location.href = "/login";
-            }
-        }, 500);
+            _this.checkStatus();
+        }, 1000);
     }
+    HomeComponent.prototype.getUserName = function () {
+        return this.userName;
+    };
+    HomeComponent.prototype.checkStatus = function () {
+        if (!this.storageService.getData("login")) {
+            window.location.href = "/login";
+        }
+        else {
+            this.userName = JSON.parse(this.storageService.getData("login"))["name"];
+            this.show = true;
+        }
+    };
     HomeComponent.prototype.ngOnInit = function () {
     };
     HomeComponent = __decorate([
@@ -311,7 +327,7 @@ module.exports = ""
 /***/ "./src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"mdl-grid\">\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \">\n      <h4>Login</h4>\n    </div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \">\n\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" [(ngModel)]=\"username\" type=\"text\" id=\"username\">\n        <label class=\"mdl-textfield__label\" for=\"username\">username</label>\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" [(ngModel)]=\"password\" type=\"password\" id=\"password\">\n        <label class=\"mdl-textfield__label\" for=\"password\">password</label>\n      </div>\n      <div>\n        <button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" (click)=\"click()\">\n          log in\n        </button>\n      </div>\n      <div>\n        <a routerLink=\"/login/create\"> or create user</a>\n      </div>\n    </div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n  </div>\n\n</div>\n"
+module.exports = "<div class=\"container\">\n  <div class=\"mdl-grid\">\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \">\n      <h4>Login</h4>\n    </div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n    <div class=\"mdl-cell mdl-cell--4-col \">\n\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" placeholder=\"username\" [(ngModel)]=\"username\" type=\"text\" id=\"username\">\n        <!-- <label class=\"mdl-textfield__label\" for=\"username\">username</label> -->\n      </div>\n      <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n        <input class=\"mdl-textfield__input\" placeholder=\"password\" [(ngModel)]=\"password\" type=\"password\" id=\"password\">\n        <!-- <label class=\"mdl-textfield__label\" for=\"password\">password</label> -->\n      </div>\n      <div>\n        <button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\" (click)=\"click()\">\n          log in\n        </button>\n      </div>\n      <div>\n        <a routerLink=\"/login/create\"> or create user</a>\n      </div>\n    </div>\n    <div class=\"mdl-cell mdl-cell--4-col \"></div>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -350,20 +366,19 @@ var LoginComponent = /** @class */ (function () {
             } }));
         var timerId = setInterval(function () {
             if (_this.socketService.isAnswered()) {
-                var aswr = _this.socketService.getAnswer();
-                console.log(aswr);
-                if (aswr["command"] == "status") {
+                var result = _this.socketService.getAnswer();
+                console.log(result);
+                if (result["command"] == "status") {
                     clearInterval(timerId);
-                    if (aswr["data"] == "ok") {
+                    if (result["data"] == "ok") {
                         alert("user logged in");
-                        _this.storageService.save("login", {
-                            user: _this.username
-                        });
+                        _this.storageService.save("login", result["data2"]);
                         _this.username = "";
                         _this.password = "";
+                        window.location.href = "/";
                     }
                     else {
-                        // alert("login failed");
+                        alert("login failed");
                     }
                 }
             }
@@ -373,7 +388,6 @@ var LoginComponent = /** @class */ (function () {
         }, 100);
         setTimeout(function () {
             clearInterval(timerId);
-            alert("login failed");
         }, 1000);
     };
     LoginComponent.prototype.ngOnInit = function () {
