@@ -13,8 +13,6 @@ export class HomeComponent implements OnInit {
     setInterval(() => {
       if(!ss.getData("login")){
         window.location.href = "/login";
-        window.location = "/login";
-        window.location.assign = "/login";
       }
     }, 500);
   }
